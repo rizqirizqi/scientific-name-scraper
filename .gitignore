@@ -1,0 +1,8 @@
+.vscode/
+__pycache__/
+.venv/
+.env
+
+result*.csv
+result*.json
+log*.txt
