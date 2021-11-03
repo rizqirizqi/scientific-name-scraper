@@ -31,6 +31,20 @@ Scrape plants scientific name information from [Species Switchboard 2.0](http://
 pipenv run scrapy shell 'http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Acacia%20abyssinica'
 ```
 
+### Cleanup Outputs
+```sh
+rm result.* && rm log.*
+```
+### Special Cases
+| Case | Link | Note |
+|---|---|---|
+| ICRAF Databases Not Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata |
+| Genus Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Forficula | What to do next? |
+| Species Variant Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata | What to do next? |
+| Multiple Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis | Get the matched species right? |
+| Similar Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus | Need human to check |
+| Similar Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Symplocos%20spicata | Need human to check |
+
 ## Contributing
 1. Fork this repo
 2. Develop
