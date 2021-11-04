@@ -1,5 +1,6 @@
 from datetime import datetime
 import getopt
+import re
 import os
 import sys
 import pandas as pd
@@ -56,7 +57,7 @@ if __name__ == "__main__":
             scientific_names = pd.read_excel(inputfile)[inputcolumn].tolist()
         start_urls = []
         for name in scientific_names:
-            name_to_search = name.strip().replace(' ', '%20')
+            name_to_search = re.sub(r'[^\w]', ' ', name).strip().replace(' ', '%20')
             start_urls.append(f'http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/{name_to_search}')
         SwitchboardSpider.start_urls = start_urls
 
