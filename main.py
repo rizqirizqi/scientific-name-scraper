@@ -37,12 +37,12 @@ def readArgs():
     print('---------------------------------------------')
     return inputfile, outputfile, inputcolumn, logfile
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         # Setup File
         inputfile, outputfile, inputcolumn, logfile = readArgs()
         if not os.path.isfile(inputfile):
-            print("Input file not found, please check your command.")
+            print('Input file not found, please check your command.')
             print(USAGE_HINT)
             sys.exit()
 
@@ -64,30 +64,30 @@ if __name__ == "__main__":
         print('RUNNING CRAWLER...')
         print('It may take a while, please wait...')
         process = CrawlerProcess(settings={
-            "FEEDS": {
+            'FEEDS': {
                 outputfile: {
-                    "format": "csv",
-                    "fields": [
-                        "Scientific Name",
-                        "Found Species Name",
-                        "Note",
-                        "Switchboard",
-                        "African Wood Density Database",
-                        "Agroforestree Database",
-                        "Genetic Resources Unit Database",
-                        "RELMA-ICRAF Useful Trees",
-                        "Tree Functional Attributes and Ecological Database",
-                        "Tree Seed Suppliers Directory",
-                        "Useful Tree Species for Africa Map",
-                        "vegetationmap4africa"
+                    'format': 'csv',
+                    'fields': [
+                        'Scientific Name',
+                        'Found Species Name',
+                        'Note',
+                        'Switchboard',
+                        'African Wood Density Database',
+                        'Agroforestree Database',
+                        'Genetic Resources Unit Database',
+                        'RELMA-ICRAF Useful Trees',
+                        'Tree Functional Attributes and Ecological Database',
+                        'Tree Seed Suppliers Directory',
+                        'Useful Tree Species for Africa Map',
+                        'vegetationmap4africa'
                     ]
                 },
             },
-            "LOG_FILE": logfile,
+            'LOG_FILE': logfile,
         })
         process.crawl(SwitchboardSpider)
         process.start()
         print('Done!')
     except KeyboardInterrupt:
-        print("Stopped!")
+        print('Stopped!')
         sys.exit(0)

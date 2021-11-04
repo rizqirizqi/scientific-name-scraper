@@ -73,11 +73,14 @@ rm result.* && rm log.*
 ### Special Cases
 | Case | Link | Note |
 |---|---|---|
-| ICRAF Databases Not Found | [Engelhardia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata) |
-| Genus Found | [Forficula](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Forficula) | What to do next? |
-| Multiple Species Found | [Alstonia spectabilis](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis) | Get the matched species right? |
-| Species Variant Found | [Engelhardtia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata) | Need human to check |
-| Similar Species Found | [Costus speciosus](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus) | Need human to check |
+| ICRAF Database Not Found | [Engelhardia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata) | Need human to check ✔ |
+| Genus Found | [Forficula](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Forficula) | Need human to check ✔ |
+| Multiple Species Found | [Alstonia spectabilis](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis) | Get the matched substring of the species ✔ |
+| Similar Species Found | [Costus speciosus](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus) | Need human to check ✔ |
+| Similar Species Found: variant | [Engelhardtia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata) | Get the exact match ✔ |
+| Similar Species Found: subsp / ssp | Ailanthus integrifolia | Get the species ✔ |
+| Similar Species Found: double space | Anacardium occidentale | Get the exact match ✔ |
+| Duplicate Link Found | Intsia bijuga | Need human to check ✔ |
 
 ## Contributing
 1. Fork this repo
