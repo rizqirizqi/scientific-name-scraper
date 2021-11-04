@@ -31,19 +31,19 @@ Scrape plants scientific name information from [Species Switchboard 2.0](http://
 pipenv run scrapy shell 'http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Acacia%20abyssinica'
 ```
 
-### Cleanup Outputs
+### Cleanup All Outputs
 ```sh
 rm result.* && rm log.*
 ```
+
 ### Special Cases
 | Case | Link | Note |
 |---|---|---|
-| ICRAF Databases Not Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata |
-| Genus Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Forficula | What to do next? |
-| Species Variant Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata | What to do next? |
-| Multiple Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis | Get the matched species right? |
-| Similar Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus | Need human to check |
-| Similar Species Found | http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Symplocos%20spicata | Need human to check |
+| ICRAF Databases Not Found | [Engelhardia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata) |
+| Genus Found | [Forficula](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Forficula) | What to do next? |
+| Multiple Species Found | [Alstonia spectabilis](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis) | Get the matched species right? |
+| Species Variant Found | [Engelhardtia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata) | Need human to check |
+| Similar Species Found | [Costus speciosus](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus) | Need human to check |
 
 ## Contributing
 1. Fork this repo
@@ -65,5 +65,5 @@ GPL-3.0
 [github-watch]: https://github.com/rizqirizqi/species-switchboard-scraper/watchers
 [github-star-badge]: https://img.shields.io/github/stars/rizqirizqi/species-switchboard-scraper.svg?style=social
 [github-star]: https://github.com/rizqirizqi/species-switchboard-scraper/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Fetch%20plants%20and%20animals%20scientific%20name%20information%20from%20the%20internet!%20https%3A%2F%2Fgithub.com%2Frizqirizqi%2Fspecies-switchboard-scraper
+[twitter]: https://twitter.com/intent/tweet?text=Scrape%20plants%20scientific%20name%20information%20from%20Agroforestry%20Species%20Switchboard%202.0.%20https%3A%2F%2Fgithub.com%2Frizqirizqi%2Fspecies-switchboard-scraper
 [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/rizqirizqi/species-switchboard-scraper.svg?style=social
