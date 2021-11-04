@@ -13,18 +13,52 @@ Scrape plants scientific name information from [Species Switchboard 2.0](http://
 - [python >= 3.10](https://www.python.org/downloads/) (you can use [pyenv](https://github.com/pyenv/pyenv) for easier python version management)
 - [pipenv](https://github.com/pypa/pipenv)
 
+<details>
+   <summary>Detailed Guide for Windows</summary>
+
+   1. Download python from https://www.python.org/downloads/
+   2. Install python, follow the instruction
+   3. Press Win button (something like window icon on keyboard), search "env", then open `Edit the system environment variables`
+   4. Click Environment Variables
+   5. On `System Variables` section, edit the `Path` key
+   6. Add these paths using the `New` button:
+      ```
+      # Please replace the username with your windows username, you can see it in C:\Users folder
+      # Please replace the python version with your installed python version
+      C:\Users\<YOUR_USERNAME>\AppData\Local\Programs\Python\Python310
+      C:\Users\<YOUR_USERNAME>\AppData\Local\Programs\Python\Python310\Scripts
+      C:\Users\<YOUR_USERNAME>\AppData\Roaming\Python\Python310\Scripts
+      ```
+   7. Click OK, then OK
+   8. Open cmd, then type `python --version`, then it should respond with the python version.
+   9. Type `pip3 install --user pipenv`, then it should install pipenv, make sure it's successfully installed.
+   10. Type `pipenv --version`, then it should respond with the pipenv version.
+   11. Done! You can continue follow the guide in the "How to run" section.
+</details>
+
+
 ## How to run
-1. Install dependencies
-   ```python
-   cp env.sample .env
+1. Clone
+   ```sh
+   git clone git@github.com:rizqirizqi/species-switchboard-scraper.git
+   cd species-switchboard-scraper
+   ```
+2. Install dependencies
+   ```sh
    pipenv --python 3
    pipenv install
    ```
-3. Run
+3. Fill your input in `input.csv`, please look at `samples/input.csv` for example. You can also use txt or xlsx if you want.
+4. Run
    ```sh
-   pipenv run python main.py
+   pipenv run python main.py -i input.csv
    ```
-4. The result will be placed in a file named `result.*.csv`
+5. The result will be placed in a file named `result.*.csv`
+
+### Help
+```sh
+pipenv run python main.py --help
+```
 
 ### Test Shell
 ```sh
