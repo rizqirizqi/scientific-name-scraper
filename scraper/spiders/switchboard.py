@@ -14,7 +14,7 @@ class SwitchboardSpider(scrapy.Spider):
             species_dict['Found Species Name'] = species_name
             species_dict['Switchboard'] = response.request.url
         else:
-            self.logger.info('Species not found!')
+            species_dict['Note'] = 'species_not_found'
         search_result = response.css('#linksWrapper > div')
         if len(search_result) > 0:
             icraflinks = search_result[0].css('h3::text')[0].get()
@@ -27,5 +27,7 @@ class SwitchboardSpider(scrapy.Spider):
                             db_name = " ".join(table.css('th::text').get().strip().split())
                             species_dict[db_name] = link.css('::attr(href)').get()
             else:
-                self.logger.info('ICRAF Database section not found!')
+                species_dict['Note'] = 'icraf_database_not_found'
+        else:
+            species_dict['Note'] = 'similar_species_found'
         return species_dict

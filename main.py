@@ -69,12 +69,15 @@ if __name__ == "__main__":
                     "fields": [
                         "Scientific Name",
                         "Found Species Name",
+                        "Note",
                         "Switchboard",
+                        "African Wood Density Database",
                         "Agroforestree Database",
                         "Genetic Resources Unit Database",
                         "RELMA-ICRAF Useful Trees",
                         "Tree Functional Attributes and Ecological Database",
                         "Tree Seed Suppliers Directory",
+                        "Useful Tree Species for Africa Map",
                         "vegetationmap4africa"
                     ]
                 },
