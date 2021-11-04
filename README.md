@@ -11,7 +11,7 @@ Scrape plants scientific name information from [Species Switchboard 2.0](http://
 
 ## Requirements
 - [python >= 3.10](https://www.python.org/downloads/) (you can use [pyenv](https://github.com/pyenv/pyenv) for easier python version management)
-- [pipenv](https://pipenv.pypa.io/en/latest/)
+- [pipenv](https://github.com/pypa/pipenv)
 
 ## How to run
 1. Install dependencies
