@@ -68,8 +68,9 @@ if __name__ == '__main__':
                 outputfile: {
                     'format': 'csv',
                     'fields': [
+                        'Query',
+                        'Species Name',
                         'Scientific Name',
-                        'Found Species Name',
                         'Note',
                         'Switchboard',
                         'African Wood Density Database',

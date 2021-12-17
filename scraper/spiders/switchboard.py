@@ -14,7 +14,7 @@ class SwitchboardSpider(scrapy.Spider):
         name_to_search = query.replace('%20', ' ')
         print('Looking up:', name_to_search)
         species_dict = {
-            'Scientific Name': name_to_search,
+            'Query': name_to_search,
             'Switchboard': 'NA',
             'African Wood Density Database': 'NA',
             'Agroforestree Database': 'NA',
@@ -27,11 +27,15 @@ class SwitchboardSpider(scrapy.Spider):
         }
 
         # Parse species name
-        species_name = response.css('body > main > div:nth-child(2) > table tr:nth-child(2) td::text').get()
+        matched_species = response.css('body > main > div:nth-child(2) > table tr:nth-child(2) td:nth-child(2)')
+        species_name = matched_species.css('a::text').get().strip()
+        author = matched_species.xpath('text()').get().strip()
+        scientific_name = f"{species_name} {author}".strip()
         if not species_name:
             self.log_note(species_dict, 'species_not_found')
             return species_dict
-        species_dict['Found Species Name'] = species_name
+        species_dict['Species Name'] = species_name
+        species_dict['Scientific Name'] = scientific_name
         species_dict['Switchboard'] = response.request.url
         if len(name_to_search.split()) == 1:
             self.log_note(species_dict, 'genus_found')

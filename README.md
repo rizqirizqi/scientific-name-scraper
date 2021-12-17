@@ -78,9 +78,10 @@ rm result.* && rm log.*
 | Multiple Species Found | [Alstonia spectabilis](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Alstonia%20spectabilis) | Get the matched substring of the species ✔ |
 | Similar Species Found | [Costus speciosus](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Costus%20speciosus) | Need human to check ✔ |
 | Similar Species Found: variant | [Engelhardtia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardtia%20spicata) | Get the exact match ✔ |
-| Similar Species Found: subsp / ssp | Ailanthus integrifolia | Get the species ✔ |
-| Similar Species Found: double space | Anacardium occidentale | Get the exact match ✔ |
-| Duplicate Link Found | Intsia bijuga | Need human to check ✔ |
+| Similar Species Found: subsp / ssp | [Ailanthus integrifolia](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Ailanthus%20integrifolia) | Get the species ✔ |
+| Similar Species Found: double space | [Anacardium occidentale](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Anacardium%20occidentale) | Get the exact match ✔ |
+| Duplicate Link Found | [Intsia bijuga](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Intsia%20bijuga) | Need human to check ✔ |
+| External Link Found | [Elaeocarpus petiolatus](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Elaeocarpus%20petiolatus) | Remove the link ✔ |
 
 ## Contributing
 1. Fork this repo
