@@ -1,4 +1,4 @@
-# Agroforestry Species Switchboard 2.0 Scraper
+# Scientific Name Scraper
 
 [![contributions welcome][contrib-badge]][contrib-url]
 [![MIT License][license-badge]][license-url]
@@ -7,7 +7,11 @@
 [![Star on GitHub][github-star-badge]][github-star]
 [![Tweet][twitter-badge]][twitter]
 
-Scrape plants scientific name information from [Species Switchboard 2.0](http://apps.worldagroforestry.org/products/switchboard).
+Scrape plants scientific name information from the internet.
+
+Current supported sources:
+- [Species Switchboard 2.0 (SWITCHBOARD)](http://apps.worldagroforestry.org/products/switchboard).
+- [The World Flora Online (WFO)](http://www.worldfloraonline.org/).
 
 ## Requirements
 - [python >= 3.10](https://www.python.org/downloads/) (you can use [pyenv](https://github.com/pyenv/pyenv) for easier python version management)
@@ -62,15 +66,17 @@ pipenv run python main.py --help
 
 ### Test Shell
 ```sh
+pipenv run scrapy shell <URL>
+# Example
 pipenv run scrapy shell 'http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Acacia%20abyssinica'
 ```
 
-### Cleanup All Outputs
+### Cleanup All Default Outputs
 ```sh
 rm result.* && rm log.*
 ```
 
-### Special Cases
+### Switchboard Special Cases
 | Case | Link | Note |
 |---|---|---|
 | ICRAF Database Not Found | [Engelhardia spicata](http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Engelhardia%20spicata) | Need human to check ✔ |
