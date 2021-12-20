@@ -44,8 +44,8 @@ Current supported sources:
 ## How to run
 1. Clone
    ```sh
-   git clone git@github.com:rizqirizqi/species-switchboard-scraper.git
-   cd species-switchboard-scraper
+   git clone git@github.com:rizqirizqi/scientific-name-scraper.git
+   cd scientific-name-scraper
    ```
 2. Install dependencies
    ```sh
@@ -101,13 +101,13 @@ rm result.* && rm log.*
 GPL-3.0
 
 [contrib-badge]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square
-[contrib-url]: https://github.com/rizqirizqi/species-switchboard-scraper/issues
+[contrib-url]: https://github.com/rizqirizqi/scientific-name-scraper/issues
 [license-badge]: https://img.shields.io/npm/l/webpconvert.svg?style=flat-square
 [license-url]: https://github.com/rizqirizqi/webpconvert/blob/master/LICENSE
 
-[github-watch-badge]: https://img.shields.io/github/watchers/rizqirizqi/species-switchboard-scraper.svg?style=social
-[github-watch]: https://github.com/rizqirizqi/species-switchboard-scraper/watchers
-[github-star-badge]: https://img.shields.io/github/stars/rizqirizqi/species-switchboard-scraper.svg?style=social
-[github-star]: https://github.com/rizqirizqi/species-switchboard-scraper/stargazers
-[twitter]: https://twitter.com/intent/tweet?text=Scrape%20plants%20scientific%20name%20information%20from%20Agroforestry%20Species%20Switchboard%202.0.%20https%3A%2F%2Fgithub.com%2Frizqirizqi%2Fspecies-switchboard-scraper
-[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/rizqirizqi/species-switchboard-scraper.svg?style=social
+[github-watch-badge]: https://img.shields.io/github/watchers/rizqirizqi/scientific-name-scraper.svg?style=social
+[github-watch]: https://github.com/rizqirizqi/scientific-name-scraper/watchers
+[github-star-badge]: https://img.shields.io/github/stars/rizqirizqi/scientific-name-scraper.svg?style=social
+[github-star]: https://github.com/rizqirizqi/scientific-name-scraper/stargazers
+[twitter]: https://twitter.com/intent/tweet?text=Scrape%20plants%20scientific%20name%20information%20from%20Agroforestry%20Species%20Switchboard%202.0.%20https%3A%2F%2Fgithub.com%2Frizqirizqi%2Fscientific-name-scraper
+[twitter-badge]: https://img.shields.io/twitter/url/https/github.com/rizqirizqi/scientific-name-scraper.svg?style=social
