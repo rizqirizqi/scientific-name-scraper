@@ -1,4 +1,4 @@
-# Scientific Name Scraper
+# Scientific Name Scraper (sciscraper)
 
 [![contributions welcome][contrib-badge]][contrib-url]
 [![MIT License][license-badge]][license-url]
