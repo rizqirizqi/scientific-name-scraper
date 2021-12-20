@@ -8,9 +8,22 @@ from scrapy.crawler import CrawlerProcess
 from scraper.spiders.switchboard import SwitchboardSpider
 from scraper.spiders.wfo import WfoSpider
 
-USAGE_HINT = (
-    "Usage:\npipenv run python main.py -i <inputfile> -o <outputfile> -c <inputcolumn>"
-)
+USAGE_HINT = "\
+USAGE:\n\
+pipenv run python -m sciscraper <OPTIONS>\n\
+\n\
+OPTIONS:\n\
+    -s <source>                 | Set data source. Available source: SWITCHBOARD, WFO\n\
+    -i <inputfile>              | Set input file\n\
+    -o <outputfile>             | Set output file\n\
+    -c <inputcolumn>            | Set name column from input csv/xlsx\n\
+\n\
+EXAMPLES:\n\
+    Normal usage:           pipenv run python -m sciscraper -i samples/input.csv -o output.csv\n\
+    Set data source:        pipenv run python -m sciscraper -i samples/input.csv -o output.csv -s WFO\n\
+    Set id and name column: pipenv run python -m sciscraper -i samples/input.csv -o output.csv -c ScientificName\n\
+    Show help message:      pipenv run python -m sciscraper -h\n\
+"
 
 
 def readArgs():

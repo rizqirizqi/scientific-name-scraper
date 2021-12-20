@@ -55,13 +55,13 @@ Current supported sources:
 3. Fill your input in `input.csv`, please look at `samples/input.csv` for example. You can also use txt or xlsx if you want.
 4. Run
    ```sh
-   pipenv run python main.py -i input.csv
+   pipenv run python -m sciscraper -i input.csv
    ```
 5. The result will be placed in a file named `result.*.csv`
 
 ### Help
 ```sh
-pipenv run python main.py --help
+pipenv run python -m sciscraper --help
 ```
 
 ### Test Shell
