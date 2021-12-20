@@ -35,7 +35,7 @@ def readArgs():
     inputcolumn = "Names"  # default column name to be read from csv files
     try:
         opts, args = getopt.getopt(
-            sys.argv[1:], "hi:o:s:", ["ifile=", "ofile=", "source="]
+            sys.argv[1:], "hi:o:s:c:", ["ifile=", "ofile=", "source=", "column="]
         )
     except getopt.GetoptError:
         print(USAGE_HINT)
@@ -56,6 +56,8 @@ def readArgs():
     print("Output file:", outputfile)
     if source != "ALL":
         print(f"Source: {source}")
+    if inputcolumn:
+        print(f"Name Column: {inputcolumn}")
     print("Log file:", logfile)
     print("---------------------------------------------")
     return inputfile, outputfile, source, inputcolumn, logfile
@@ -129,7 +131,7 @@ if __name__ == "__main__":
             },
             {
                 "class": WfoSpider,
-                "url": "http://www.worldfloraonline.org/search?query={}&view=&limit=5&start=0&sort=&facet=taxon.taxon_rank_s%3aSPECIES",
+                "url": "http://www.worldfloraonline.org/search?query={}&view=&limit=5&start=0&sort=",
                 "fields": [
                     "Query",
                     "Source",

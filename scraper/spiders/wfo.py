@@ -45,7 +45,10 @@ class WfoSpider(scrapy.Spider):
             species_dict["Status"] = data_col.css("#entryStatus::text").get().strip().split()[0].upper()
             species_dict["Rank"] = data_col.css("#entryRank::text").get().strip().split()[0].upper()
             species_name = data_col.css("h4 em::text").get().strip()
-            author = data_col.css("h4 strong::text").get().strip()
+            author = data_col.css("h4 strong::text").get()
+            if not author:
+                author = data_col.css("h4::text").get()
+            author = author.strip()
             scientific_name = f"{species_name} {author}".strip()
             if species_dict["Status"] == "ACCEPTED":
                 species_dict["Accepted Name"] = scientific_name
@@ -57,8 +60,10 @@ class WfoSpider(scrapy.Spider):
             species_dict["Scientific Name"] = scientific_name
             species_dict["Canonical Name"] = species_name
             species_dict["Authorship"] = author
+            info = data_col.css('div::text')
             species_dict["Family"] = data_col.css('div::text')[0].get().strip()
-            species_dict["Order"] = data_col.css('div::text')[1].get().strip()
+            if len(info) > 1:
+                species_dict["Order"] = data_col.css('div::text')[1].get().strip()
             species_dict["Genus"] = species_name.split()[0]
             species_dict["Species"] = species_name
             species_dict["URL"] = f"http://www.worldfloraonline.org/taxon/{species_url_path}"

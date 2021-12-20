@@ -2,6 +2,7 @@ __pycache__/
 .venv/
 .env
 
+output.csv
 result*.csv
 result*.json
 log*.txt
