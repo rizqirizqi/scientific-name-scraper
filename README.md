@@ -67,8 +67,12 @@ pipenv run python -m sciscraper --help
 ### Test Shell
 ```sh
 pipenv run scrapy shell <URL>
-# Example
+# Switchboard Example
 pipenv run scrapy shell 'http://apps.worldagroforestry.org/products/switchboard/index.php/species_search/Acacia%20abyssinica'
+# WFO Example
+pipenrun scrapy shell 'http://www.worldfloraonline.org/search?query=Costus+speciosus&view=&limit=5&start=0&sort='
+result = response.css("#v results > table tr")[0]
+data_col = result.css("td:nth-child(2)")
 ```
 
 ### Cleanup All Default Outputs
