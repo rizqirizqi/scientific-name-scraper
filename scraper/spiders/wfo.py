@@ -54,7 +54,7 @@ class WfoSpider(scrapy.Spider):
                 species_dict["Accepted Name"] = scientific_name
             elif species_dict["Status"] == "SYNONYM":
                 accepted_species = data_col.css("div a em::text").get().strip()
-                accepted_author = data_col.css("div a em::text").get().strip()
+                accepted_author = data_col.css("div a::text").get().strip()
                 accepted_name = f"{accepted_species} {accepted_author}".strip()
                 species_dict["Accepted Name"] = accepted_name
             species_dict["Scientific Name"] = scientific_name
