@@ -1,4 +1,4 @@
-# Scientific Name Scraper (sciscraper)
+# scientific-name-scraper (sciscraper)
 
 [![contributions welcome][contrib-badge]][contrib-url]
 [![MIT License][license-badge]][license-url]
@@ -102,7 +102,7 @@ rm result.* && rm log.*
 
 ## License
 
-GPL-3.0
+MIT
 
 [contrib-badge]: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square
 [contrib-url]: https://github.com/rizqirizqi/scientific-name-scraper/issues
