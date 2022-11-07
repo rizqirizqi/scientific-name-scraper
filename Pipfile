@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-scrapy = "~=2.5"
+scrapy = "~=2.7"
 pandas = "~=1.3"
 openpyxl = "~=3.0"
 
